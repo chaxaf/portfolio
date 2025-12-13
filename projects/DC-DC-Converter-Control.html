@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Analysis and Control of SAB and PSFB Converters – Charlotte Heibig</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">Charlotte Heibig</div>
+      <nav class="nav-links">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <a href="../index.html#projects" class="btn ghost" style="margin-bottom:1.5rem;">
+        ← Back to projects
+      </a>
+
+      <h1>Analysis and Control of SAB and PSFB Converters</h1>
+      <p class="section-intro">
+        Semester project at EPFL’s Power Electronics Laboratory where I designed and tuned
+        control strategies for high-power Single Active Bridge (SAB) and Phase-Shifted Full
+        Bridge (PSFB) DC/DC converters intended for medium-voltage DC grids fed by renewable
+        sources. :contentReference[oaicite:0]{index=0}
+      </p>
+
+      <div class="project-detail-layout"
+           style="display:grid;grid-template-columns:minmax(0,1.6fr)minmax(0,1fr);gap:2rem;margin-top:2rem;">
+
+        <!-- MAIN COLUMN -->
+        <div>
+          <h2>Overview</h2>
+          <p>
+            Large-scale integration of renewables requires isolated, efficient DC/DC conversion
+            between a 5&nbsp;kV input and a 20&nbsp;kV DC collection grid at tens of megawatts.
+            I studied two promising topologies – SAB and PSFB – and focused on how well they can
+            keep the input DC link voltage stable when the source and grid introduce disturbances.
+            The work was entirely simulation-based (PLECS/Matlab) and compared both steady-state
+            and dynamic behaviour under the same operating conditions.
+          </p>
+
+          <h2>Objectives</h2>
+          <ul class="about-list">
+            <li>Develop a simple PI-based input DC link control for SAB and PSFB converters.</li>
+            <li>Evaluate behaviour in both continuous and discontinuous conduction modes (CCM/DCM).</li>
+            <li>Compare several tuning approaches: manual tuning, transfer-function-based tuning and closed-loop Ziegler–Nichols.</li>
+            <li>Quantify sensitivity to disturbances in input current and output voltage for multiple converter designs.</li>
+          </ul>
+
+          <h2>My Contributions</h2>
+          <ul class="about-list">
+            <li>Built averaged small-signal models of SAB and PSFB converters, including CICEA-based models for SAB/PSFB in DCM and a literature-based model for PSFB in CCM.</li>
+            <li>Derived analytical transfer functions and used them to compute PI gains from Bode plots and desired crossover frequencies.</li>
+            <li>Implemented manual and Ziegler–Nichols tuning loops directly in PLECS, including disturbance injection via lookup tables.</li>
+            <li>Ran extensive simulations on three different converter designs and documented settling time, overshoot and robustness for each topology and tuning method.</li>
+          </ul>
+
+          <h2>Methodology</h2>
+          <ul class="about-list">
+            <li><strong>Converters:</strong> SAB and PSFB rated for 5&nbsp;kV ±10&nbsp;% input, 20&nbsp;kV ±10&nbsp;% output and 20&nbsp;MW, switching at 500&nbsp;Hz.</li>
+            <li><strong>Control law:</strong> PI controller regulating input voltage via duty-cycle / phase-shift modulation.</li>
+            <li><strong>Disturbances:</strong> ±10&nbsp;% steps on input current (renewable source) and output voltage (DC/AC stage) to emulate realistic grid events.</li>
+            <li><strong>Tuning:</strong> comparison of transfer-function-based design vs. closed-loop Ziegler–Nichols and manual tuning for three sets of SAB/PSFB parameters in CCM and DCM.</li>
+          </ul>
+
+          <div class="hardware-photos">
+            <img src="images/sab_psfb_schematic.jpg" alt="SAB and PSFB converter schematics" />
+            <img src="images/sab_psfb_bode.jpg" alt="Bode diagrams used for PI tuning" />
+            <img src="images/sab_psfb_steps.jpg" alt="Step-response plots for SAB and PSFB converters" />
+          </div>
+
+          <h2>Results & Insights</h2>
+          <ul class="about-list">
+            <li>SAB is significantly more sensitive to input-current disturbances than to output-voltage variations; PSFB shows a more balanced response.</li>
+            <li>Ziegler–Nichols tuning consistently reduced input-voltage spikes compared to transfer-function-based tuning, often by more than half of the overshoot.</li>
+            <li>In DCM, SAB and PSFB exhibit very similar dynamics, confirming that the same tuning approach can be reused across topologies.</li>
+            <li>Carefully tuned manual PI controllers still achieved the best overall trade-off between speed and overshoot, underlining the value of engineering intuition on top of analytical tools.</li>
+          </ul>
+
+          <h2>Technologies</h2>
+          <p>
+            Power electronics modelling, SAB &amp; PSFB topologies, DC/DC converter control,
+            small-signal analysis, PI controller design, Ziegler–Nichols tuning, PLECS,
+            Matlab/Simulink, medium-voltage DC systems.
+          </p>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside>
+          <div class="project-card" style="box-shadow:none;">
+            <div class="project-image">
+              <img src="../images/powerlab_mvdc.jpg" alt="MV DC converter illustration" />
+            </div>
+            <div class="project-content">
+              <h3>Project details</h3>
+              <p><strong>Title:</strong> Analysis and Control of SAB and PSFB Converters</p>
+              <p><strong>Role:</strong> Semester project student</p>
+              <p><strong>Lab:</strong> Power Electronics Laboratory, EPFL</p>
+              <p><strong>Focus:</strong> Control design, dynamic analysis, MV DC/DC conversion</p>
+              <p><strong>Period:</strong> Spring 2024</p>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Charlotte Heibig</span>
+      <span>Aerospace &amp; Embedded Systems</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

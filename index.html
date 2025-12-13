@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Charlotte Heibig – Aerospace Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Charlotte Heibig, aerospace-focused EPFL engineer with experience in propulsion testing, avionics, and embedded systems." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">Charlotte Heibig</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Home -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-kicker">Aerospace & Embedded Systems</p>
+        <h1>Charlotte Heibig</h1>
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary">View Projects</a>
+          <a href="assets/CV_Large.pdf"
+            class="btn hero-cv"
+            download>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <p class="section-intro">
+        Aerospace-focused Electrical and Electronic Engineering graduate from EPFL,
+        with hands-on experience in propulsion test benches, avionics systems, and embedded
+        software for flight hardware.
+      </p>
+      <div class="about-grid">
+        <div>
+          <h3>What I work on</h3>
+          <ul class="about-list">
+            <li>Design and validation of flight hardware and test benches for space applications</li>
+            <li>Real-time embedded software on STM32 and FPGA-based systems</li>
+            <li>Avionics and telemetry for high-power rocketry</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <p><strong>M.Sc. Electrical & Electronic Engineering</strong><br />EPFL, 2023–2025</p>
+          <p><strong>B.Sc. Electrical & Electronic Engineering</strong><br />EPFL, 2020–2023</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2>Projects</h2>
+      <p class="section-intro">
+        A selection of research, rocketry and embedded-systems projects I’ve contributed to.
+      </p>
+      <div class="projects-grid">
+
+        <!-- Project 1: Master's Thesis / JPL -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/Chopper_mars.jpg" alt="Heated helium thruster testbench" />
+          </div>
+          <div class="project-content">
+            <h3>Heated Helium Thruster Testbench</h3>
+            <p>
+              Development and characterization of a test bench replicating hydrazine thruster
+              plume conditions using heated helium at NASA JPL.
+            </p>
+            <div class="project-tags">
+              <span>Propulsion</span><span>Test Bench</span><span>CFD</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/heated-helium-thruster.html">Project details →</a>
+              <!-- Optional GitHub link -->
+              <!-- <a href="https://github.com/youruser/repo" target="_blank" rel="noreferrer">GitHub ↗</a> -->
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: EPFL Rocket Team - Nordend -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/nordend_flightx.jpg" alt="Nordend competition rocket" />
+          </div>
+          <div class="project-content">
+            <h3>Nordend Launch Vehicle Avionics</h3>
+            <p>
+              Led the avionics team designing custom hardware and software for a bi-liquid launch
+              vehicle competing at the European Rocketry Challenge EuRoc 2023.
+            </p>
+            <div class="project-tags">
+              <span>Avionics</span><span>Embedded Linux</span><span>STM32</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/nordend-avionics.html">Project details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project x: Slip Ring Design -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/SADM.jpg" alt="SADM" />
+          </div>
+          <div class="project-content">
+            <h3>Slip Ring Design and Testing</h3>
+            <p>
+              Slip Ring design and testing at Beyond Gravity recommendation letter and projet description maxi.
+            </p>
+            <div class="project-tags">
+              <span>Altium Designer</span><span>xxx</span><span>xxx</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/beyond-gravity.html">Project details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Hermes supersonic test rocket -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/hermes-rocket.jpg" alt="Hermes supersonic test rocket" />
+          </div>
+          <div class="project-content">
+            <h3>Hermes Supersonic Test Rocket</h3>
+            <p>
+              Hardware and software design for a supersonic test rocket to study structural and
+              sensor behavior under high-speed flight conditions.
+            </p>
+            <div class="project-tags">
+              <span>Embedded</span><span>GNSS</span><span>Telemetry</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/hermes.html">Project details →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: FPGA camera streaming -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/fpga-camera.jpg" alt="FPGA camera streaming" />
+          </div>
+          <div class="project-content">
+            <h3>FPGA-Based Camera Streaming</h3>
+            <p>
+              FPGA design and optimization for real-time video streaming, focusing on
+              efficient data paths and low-latency image processing.
+            </p>
+            <div class="project-tags">
+              <span>FPGA</span><span>VHDL/Verilog</span><span>Real-time</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/fpga-camera-streaming.html">Project details →</a>
+              <!-- Optional GitHub -->
+              <!-- <a href="https://github.com/youruser/fpga-camera" target="_blank" rel="noreferrer">GitHub ↗</a> -->
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: Control of Isolated DC/DC Converter -->
+        <article class="project-card">
+          <div class="project-image">
+            <img src="images/fpga-camera.jpg" alt="DC/DC Converter Control" />
+          </div>
+          <div class="project-content">
+            <h3>Control of Isolated DC/DC Converter</h3>
+            <p>
+            Simulation-based modeling and control of SAB and PSFB 
+            converters to assess dynamic response in MVDC applications.
+            </p>
+            <div class="project-tags">
+              <span>Matlab</span><span>Control</span><span>Hardware in the Loop</span>
+            </div>
+            <div class="project-links">
+              <a href="projects/DC-DC-Converter-Control.html">Project details →</a>
+              <!-- Optional GitHub -->
+              <!-- <a href="https://github.com/youruser/fpga-camera" target="_blank" rel="noreferrer">GitHub ↗</a> -->
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">May 2025 – Nov 2025</div>
+          <div class="timeline-content">
+            <h3>Visiting Student Researcher – NASA JPL</h3>
+            <p>Development of a heated helium thruster test bench and plume characterization using simulations and experiments.</p>
+            <p class="timeline-meta">Pasadena, CA, USA</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 2024 – Mar 2025</div>
+          <div class="timeline-content">
+            <h3>Electronics Engineering Intern – Beyond Gravity Slip Rings SA</h3>
+            <p>PCB design and testing for space and defence slip ring systems according to ECSS and IPC standards.</p>
+            <p class="timeline-meta">Nyon, Switzerland</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 2022 – Oct 2023</div>
+          <div class="timeline-content">
+            <h3>Avionics Team Leader – EPFL Rocket Team</h3>
+            <p>Led an 8-person team building custom avionics for competition rockets, including hardware, software and telemetry.</p>
+            <p class="timeline-meta">Lausanne, Switzerland</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="section-intro">
+        I’m open to opportunities in aerospace, avionics, and embedded systems. Feel free to reach out.
+      </p>
+      <div class="contact-grid">
+        <div>
+          <h3>Details</h3>
+          <p><strong>Location:</strong> Lausanne, Switzerland</p>
+          <p><strong>Email:</strong> <a href="mailto:charlotte.heibig@outlook.fr">charlotte.heibig@outlook.fr</a></p>
+          <p><strong>Phone:</strong> +33 7 82 52 22 96</p>
+        </div>
+        <div>
+          <h3>Online</h3>
+          <p><a href="https://github.com/chaxaf" target="_blank" rel="noreferrer">GitHub – chaxaf ↗</a></p>
+          <p><a href="https://www.linkedin.com/in/charlotte-heibig" target="_blank" rel="noreferrer">LinkedIn – charlotte-heibig ↗</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Charlotte Heibig</span>
+      <span>Aerospace & Embedded Systems</span>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

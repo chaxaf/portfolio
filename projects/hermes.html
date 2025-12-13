@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hermes II Avionics Redesign – Charlotte Heibig</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">Charlotte Heibig</div>
+      <nav class="nav-links">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <a href="../index.html#projects" class="btn ghost" style="margin-bottom:1.5rem;">
+        ← Back to projects
+      </a>
+
+      <h1>Hermes II Avionics Design</h1>
+      <p class="section-intro">
+        Semester project with the EPFL Rocket Team to redesign the avionics of the Hermes II
+        supersonic rocket. I was responsible for the new electronics architecture, PCB design and
+        validation of a compact, robust flight computer for high-altitude launches.
+      </p>
+
+      <!-- REPORT BUTTON: update the href to the correct path to your PDF -->
+      <p style="margin-bottom: 1.5rem;">
+        <a
+          href="../assets/Supersonic_Rocket_Avionics.pdf"
+          target="_blank"
+          rel="noreferrer">
+          View full project report ↗
+        </a>
+      </p>
+
+      <div class="project-detail-layout"
+           style="display:grid;grid-template-columns:minmax(0,1.6fr)minmax(0,1fr);gap:2rem;margin-top:2rem;">
+
+        <!-- MAIN COLUMN -->
+        <div>
+          <h2>Overview</h2>
+          <p>
+            Hermes II is the second iteration of a solid-propellant, supersonic rocket developed by
+            the EPFL Rocket Team. After earlier flights, the avionics were redesigned to improve
+            reliability, data quality and integration inside the slim avionics bay. The new system
+            had to acquire flight data, log it on-board, supervise the mission and withstand the
+            mechanical and thermal constraints of supersonic flight.
+          </p>
+
+          <h2>My Contributions</h2>
+          <ul class="about-list">
+            <li>Defined avionics architecture with a main board and three auxiliary sensor boards.</li>
+            <li>Selected key components (MCU, sensors, RF link, GPS and power electronics) balancing performance, size and availability.</li>
+            <li>Designed multi-layer PCBs, routing high-speed and sensitive analog signals under strict layout rules (e.g. GPS microstrip and ground plane constraints).</li>
+            <li>Planned and performed bench tests to validate power, communication buses and sensor behaviour before integration in the rocket.</li>
+          </ul>
+
+          <h2>Hardware Design</h2>
+          <ul class="about-list">
+            <li>
+              <strong>Main board:</strong> microcontroller, data logging, power management and
+              interfaces to external boards in a compact four-layer PCB sized for the avionics bay.
+            </li>
+            <li>
+              <strong>Nosecone &amp; static-port boards:</strong> pressure and temperature sensing,
+              shaped to fit the nose and the static-pressure area of the structure.
+            </li>
+            <li>
+              <strong>Load-cell board:</strong> miniature circular PCB for thrust measurement and
+              corresponding analog front-end.
+            </li>
+            <li>
+              Careful RF and GPS routing with controlled-impedance microstrip and placement rules
+              to minimise interference and signal loss.
+            </li>
+          </ul>
+            <a href="https://github.com/chaxaf/Supersonic-Test-Rocket"
+              target="_blank"
+              rel="noreferrer">
+              View Hermes Hardware Files on GitHub ↗
+            </a>
+
+          <div class="hardware-photos">
+            <img src="images/hermes_main_pcb.jpg" alt="Hermes II main avionics PCB" />
+            <img src="images/hermes_sensor_boards.jpg" alt="Hermes II auxiliary sensor boards" />
+            <img src="images/hermes_avionics_stack.jpg" alt="Assembled Hermes II avionics stack" />
+          </div>
+
+          <h2>Key Learnings</h2>
+          <ul class="about-list">
+            <li>Complete PCB workflow from requirements to manufactured hardware and bring-up.</li>
+            <li>Managing trade-offs between footprint, routing constraints and signal integrity.</li>
+            <li>Designing avionics that remain debuggable and testable despite tight mechanical limits.</li>
+          </ul>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside>
+          <div class="project-card" style="box-shadow:none;">
+            <div class="project-image">
+              <img src="../images/hermes_rocket.jpg" alt="Hermes II rocket" />
+            </div>
+            <div class="project-content">
+              <h3>Project details</h3>
+              <p><strong>Project:</strong> Hermes II Avionics Redesign</p>
+              <p><strong>Role:</strong> Lead electronics designer (semester project)</p>
+              <p><strong>Organisation:</strong> EPFL Rocket Team</p>
+              <p><strong>Focus:</strong> PCB design, component selection, system integration</p>
+              <p><strong>Period:</strong> Spring 2022</p>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Charlotte Heibig</span>
+      <span>Aerospace &amp; Embedded Systems</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

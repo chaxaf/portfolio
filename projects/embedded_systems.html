@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Embedded Systems Design – Sobel HW Acceleration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .hardware-photos,
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    @media (max-width: 700px) {
+      .hardware-photos,
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .hardware-photos img,
+    .media-grid img {
+      width: 100%;
+      border-radius: 14px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">Charlotte Heibig</div>
+      <nav class="nav-links">
+        <a href="../index.html#home">Home</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <a href="../index.html#projects" class="btn ghost" style="margin-bottom:1.5rem;">
+        ← Back to projects
+      </a>
+
+      <h1>Embedded Systems Design: Sobel Edge Detection</h1>
+      <p class="section-intro">
+        Hardware/software design project focusing on Sobel edge detection, movement detection,
+        and performance optimization through custom hardware instructions and DMA-based dataflow.
+      </p>
+
+      <div class="project-detail-layout"
+        style="display:grid;grid-template-columns:minmax(0,1.6fr)minmax(0,1fr);gap:2rem;margin-top:2rem;">
+        
+        <!-- MAIN CONTENT -->
+        <div>
+          <h2>Overview</h2>
+          <p>
+            This project implements a complete image-processing pipeline on an embedded platform.
+            A Sobel filter extracts edges from grayscale images, followed by a movement detection
+            algorithm that compares consecutive frames using configurable thresholds.
+          </p>
+
+          <h2>Responsibilities</h2>
+          <ul class="about-list">
+            <li>Implemented Sobel edge detection and frame-to-frame movement detection.</li>
+            <li>Designed a Sobel accelerator as a custom hardware instruction.</li>
+            <li>Profiled execution cycles to identify performance bottlenecks.</li>
+            <li>Optimized data movement using DMA with SRAM buffer partitioning.</li>
+          </ul>
+
+          <h2>Hardware Acceleration</h2>
+          <p>
+            The Sobel operator was implemented as a custom instruction, using two operands that each
+            encode eight bytes representing neighboring pixels. This reduced instruction count and
+            memory accesses significantly.
+          </p>
+
+          <div class="hardware-photos">
+            <img src="images/embedded_page_7.png" alt="Custom Sobel instruction diagram" />
+            <img src="images/embedded_page_13.png" alt="DMA vs non-DMA Sobel comparison" />
+          </div>
+
+          <h2>Software & Optimization</h2>
+          <ul class="about-list">
+            <li>Baseline implementation in C with cycle-accurate profiling.</li>
+            <li>Hardware-accelerated Sobel achieved ~3.25× cycle reduction.</li>
+            <li>DMA-based Sobel optimization reduced CPU cycles by ~15×.</li>
+            <li>Dynamic thresholding added to improve robustness across images.</li>
+          </ul>
+
+          <div class="media-grid">
+            <img src="images/embedded_page_14.png" alt="Dynamic thresholding results" />
+            <img src="images/embedded_page_1.png" alt="Project cover slide" />
+          </div>
+
+          <h2>Technologies</h2>
+          <p>
+            Embedded C, hardware/software co-design, custom instruction logic,
+            DMA-driven dataflow, SRAM buffering, and performance profiling.
+          </p>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside>
+          <div class="project-card" style="box-shadow:none;">
+            <div class="project-image">
+              <img src="images/embedded_page_13.png" alt="Sobel DMA optimization preview" />
+            </div>
+            <div class="project-content">
+              <h3>Project details</h3>
+              <p><strong>Type:</strong> Embedded Systems Design</p>
+              <p><strong>Focus:</strong> HW/SW Co-Design & Optimization</p>
+              <p><strong>Key topics:</strong> Sobel filter, DMA, custom instruction</p>
+              <p><strong>Date:</strong> June 2024</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Charlotte Heibig</span>
+      <span>Aerospace & Embedded Systems</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
